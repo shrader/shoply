@@ -19,11 +19,12 @@ function ProductList() {
 
   return (
     <div>
+      <h1>Products:</h1>
       <ul>
          {productKeys.map(p => {
           return (
-          <li> 
-            <ProductCard key={p} product={products.products[p]} remove={() => remove(p)} add={() => add(p)} inCart={cart.includes(p)}/>
+          <li key={p}>
+            <ProductCard product={products.products[p]} remove={() => remove(p)} add={() => add(p)} inCart={!!cart[p]}/>
           </li>
          )})}
       </ul>
