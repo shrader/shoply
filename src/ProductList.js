@@ -21,10 +21,10 @@ function ProductList() {
     <div>
       <h1>Products:</h1>
       <ul>
-         {productKeys.map(p => {
+         {productKeys.map(pkey => {
           return (
-          <li key={p}>
-            <ProductCard product={products.products[p]} remove={() => remove(p)} add={() => add(p)} inCart={!!cart[p]}/>
+          <li key={pkey}>
+            <ProductCard product={products.products[pkey]} remove={() => remove(pkey)} add={() => add(pkey)} inCart={!!cart[pkey]}/>
           </li>
          )})}
       </ul>
