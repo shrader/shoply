@@ -1,6 +1,3 @@
-import ProductContext from "./ProductContext";
-
-
 function ProductCard({add, remove, product, inCart}) {
 
   return (
